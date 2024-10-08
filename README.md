@@ -22,13 +22,18 @@ We would like you to build upon the existing system to help our concierge team.
 **Implement Additional Functionality:**
 
 1. Edit Provider:
-- Add an “Edit” button next to each provider in the providers list.
-- When the “Edit” button is clicked, populate the form fields with the provider’s current details.
-- Allow the user to update the provider’s details and save the changes.
+- Create a new PUT endpoint /providers/:id to handle updating a provider's details.
+- Implement logic to validate the incoming data and update the provider in the database or in-memory storage.
 2. Delete Provider:
-- Add a “Delete” button next to each provider in the providers list
-- When the “Delete” button is clicked, remove the provider from the list and update the backend.
-3. Update UI to be more user-friendly 
-4. Implement error handling in the frontend 
+- Create a new DELETE endpoint /providers/:id to handle removing a provider.
+- Implement logic to remove the provider from the database or in-memory storage.
+3. Improve Error Handling:
+- Implement more robust error handling for all existing and new endpoints.
+- Return appropriate HTTP status codes and error messages for different scenarios (e.g., provider not found, invalid input data).
+4. Input Validation:
+- Add input validation for all endpoints that accept data (POST and PUT).
+- Ensure that required fields are present and have valid formats (e.g., time format for availability).
+5. Logging:
+- Implement logging for important actions and errors to aid in debugging and monitoring.
 
 Feel free to approach these in whatever order you would like, but we'd love for you to discuss your approach and any product considerations with us before you start coding!
